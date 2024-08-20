@@ -1,0 +1,423 @@
+{
+  "id": "12edd372-dfae-4b4c-a178-e680135af241",
+  "version": "2.0",
+  "name": "Movie_Catalogue",
+  "url": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/",
+  "tests": [{
+    "id": "546cc8b4-b0e8-4dcc-8f3a-2d500dbc147f",
+    "name": "01_Landing_Page_Confirmation",
+    "commands": [{
+      "id": "200c0270-1eea-4b2d-946b-c653a20c0340",
+      "comment": "",
+      "command": "open",
+      "target": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03a3689b-17bf-496d-a480-d7c54e7f5cb9",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Movie Catalog",
+      "targets": [],
+      "value": "="
+    }, {
+      "id": "5b92f101-0a89-4078-b62e-3af8809d07c3",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.active",
+      "targets": [
+        ["css=.active", "css:finder"],
+        ["xpath=//a[contains(text(),'About Us')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/#about')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": "MOVIE CATALOG"
+    }, {
+      "id": "7f978594-9740-4894-9aa9-1e200fefa0ae",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/#login')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": "MOVIE CATALOG"
+    }, {
+      "id": "0ac1ded0-2682-4662-a92e-3d74b8deb217",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "826ecac7-4dfc-49c6-9e03-985d29495ed3",
+    "name": "02_Login_Verifiation",
+    "commands": [{
+      "id": "de3b86b6-2d89-4d1e-8a0c-9562ab1867ca",
+      "comment": "",
+      "command": "open",
+      "target": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81590525-b80d-43a8-880b-47e5eea8bde1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7f51c3a-e5da-4319-a617-c260605b78b3",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.active",
+      "targets": [
+        ["css=.active", "css:finder"],
+        ["xpath=//a[contains(text(),'About Us')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/#about')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": "MOVIE CATALOG"
+    }, {
+      "id": "419e37d0-422d-4821-827d-54370aa13eb6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [],
+      "value": "MOVIE CATALOG"
+    }, {
+      "id": "7092aa17-3b64-4fbb-8f70-93e5b099cf4a",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginBtn",
+      "targets": [],
+      "value": "MOVIE CATALOG"
+    }, {
+      "id": "2b2b27ff-7de9-461a-88f1-c53a10404a28",
+      "comment": "",
+      "command": "click",
+      "target": "id=form2Example17",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c621688-1356-41aa-a8d4-fcc889a60e0f",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=form2Example17",
+      "targets": [],
+      "value": "test@abv.com"
+    }, {
+      "id": "3357b69d-6455-4601-b94e-c0fd685929d8",
+      "comment": "",
+      "command": "click",
+      "target": "id=form2Example27",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bce33312-2b3d-4b43-9c25-1e71055fba97",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=form2Example27",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "92001f38-5e3e-4331-bc9a-3bd9401a9f9d",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@class=\"btn warning\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1d0ae74-ae1c-41c5-9d92-320014ebb5ec",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class='subheading mb-5']",
+      "targets": [],
+      "value": "WELCOME, USER_TEST_0314!"
+    }, {
+      "id": "6da5cd2a-8d47-4ad5-bc11-f1f12449bd50",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Add Movie')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Catalog/Add#add')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": "ADD MOVIE"
+    }, {
+      "id": "8e1b7e93-4059-4b12-a87c-9cac1983274e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'All Movies')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Catalog/All#all')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": "ALL MOVIES"
+    }, {
+      "id": "597ea4f9-33fb-42ca-914b-d05be989698c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[6]/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": "LOGOUT"
+    }, {
+      "id": "ef886842-aae0-459e-aed6-e48ccb350d1a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [],
+      "value": "LOGOUT"
+    }, {
+      "id": "a82e3c48-757c-473a-a039-ba3b14248388",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1a9e7fdb-7aa0-40f8-8e6b-76631c2767cf",
+    "name": "03_Edit_Profile_Verification",
+    "commands": [{
+      "id": "77613ad9-1320-4c32-b960-a652ceafc353",
+      "comment": "",
+      "command": "open",
+      "target": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "971e5caf-9d57-4615-b4bc-b89af4358a45",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1097989-ef76-41dc-895f-928eaac866a5",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.active",
+      "targets": [
+        ["css=.active", "css:finder"],
+        ["xpath=//a[contains(text(),'About Us')]", "xpath:link"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/#about')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": "MOVIE CATALOG"
+    }, {
+      "id": "f9898478-4eca-4f2b-89e8-ef97715cc485",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f437f74c-c3b1-43d4-bda5-5f69ec0bd1b1",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginBtn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "391f4515-8ee5-435b-9f7a-beb90d2a4085",
+      "comment": "",
+      "command": "click",
+      "target": "id=form2Example17",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d9ac860-c53c-4711-ae52-37affb54942e",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=form2Example17",
+      "targets": [],
+      "value": "test@abv.com"
+    }, {
+      "id": "c54eee74-7fd0-49ca-9ed5-38a01ddbf6f3",
+      "comment": "",
+      "command": "click",
+      "target": "id=form2Example27",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce287e9b-a2d9-4db1-9ea0-f9b7b122522b",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=form2Example27",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "faca57e6-34f6-4d4a-96be-05aab7d52da7",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@class=\"btn warning\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ceac1a05-9459-49e3-b806-efec39acf275",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rounded-circle",
+      "targets": [
+        ["css=.rounded-circle", "css:finder"],
+        ["xpath=//img[@alt='profile picture']", "xpath:img"],
+        ["xpath=//nav[@id='sideNav']/a/span[2]/img", "xpath:idRelative"],
+        ["xpath=//span[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2c6ed63-4210-48a6-9ee2-6dcf271211f2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Edit",
+      "targets": [
+        ["linkText=Edit", "linkText"],
+        ["css=.btn-light", "css:finder"],
+        ["xpath=//body[@id='page-top']/div[3]/section/div/div/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Profile/Edit')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3379be58-b316-4704-a216-cc04a12b7973",
+      "comment": "",
+      "command": "type",
+      "target": "id=form2Example17",
+      "targets": [],
+      "value": "Changed_FirstName"
+    }, {
+      "id": "7ca07d9d-48cf-4ca1-ace9-946c17cbdc6b",
+      "comment": "",
+      "command": "type",
+      "target": "name=LastName",
+      "targets": [],
+      "value": "Changed_LastName"
+    }, {
+      "id": "b354792d-8e70-4e37-8933-0338b2f3fb93",
+      "comment": "",
+      "command": "click",
+      "target": "css=.warning",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a425641d-d635-47ed-8d67-fd554daa3f27",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.mb-4:nth-child(1)",
+      "targets": [
+        ["css=.mb-4:nth-child(1)", "css:finder"],
+        ["xpath=//body[@id='page-top']/div[4]/section/div/div/div/div/div/div/h6", "xpath:idRelative"],
+        ["xpath=//h6", "xpath:position"]
+      ],
+      "value": "CHANGED_FIRSTNAME CHANGED_LASTNAME"
+    }, {
+      "id": "3ff05b20-3db1-4946-bdb4-cbc2b5240797",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-link",
+      "targets": [
+        ["css=.btn-link", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarResponsive']/ul/li[6]/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "589250f6-1950-43d4-ad57-560136edbfe4",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginBtn",
+      "targets": [],
+      "value": "MOVIE CATALOG"
+    }, {
+      "id": "1507e99a-a55f-41e0-a2d4-d3ad3ee6d0f1",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=form2Example17",
+      "targets": [],
+      "value": "test@abv.com"
+    }, {
+      "id": "cddd1b87-7db8-4e2e-9e53-3f4e10b22b73",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=form2Example27",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "843cdee0-0291-4979-bc9d-3bd1c7ec9780",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rounded-circle",
+      "targets": [
+        ["css=.rounded-circle", "css:finder"],
+        ["xpath=//img[@alt='profile picture']", "xpath:img"],
+        ["xpath=//nav[@id='sideNav']/a/span[2]/img", "xpath:idRelative"],
+        ["xpath=//span[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b19eb4b9-cc35-4950-9ffa-670254752ff4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//section[@id='login']/div/div/div/div/div/div[2]/div/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7146bec-268f-4119-a7e7-be37a2c9a3e4",
+      "comment": "",
+      "command": "click",
+      "target": "//button[text()='Logout']",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//section[@id='login']/div/div/div/div/div/div[2]/div/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a893b9f6-8952-4b38-883f-280f2c7761c6",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "31e399e4-3858-42ec-bc77-a46a8df7df8d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["546cc8b4-b0e8-4dcc-8f3a-2d500dbc147f"]
+  }],
+  "urls": ["http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/"],
+  "plugins": []
+}
