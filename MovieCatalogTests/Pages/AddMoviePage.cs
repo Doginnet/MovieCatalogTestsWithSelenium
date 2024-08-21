@@ -11,11 +11,12 @@ namespace MovieCatalogTests.Pages
 {
 	public class AddMoviePage : BasePage
 	{
+		
 		public AddMoviePage(WebDriver driver) : base(driver)
 		{
 		}
 
-		public  string Url => BaseUrl + "/Catalog/Add"; //providing the url 
+		public string Url => BaseUrl + "/Catalog/Add"; //providing the url 
 
 		public IWebElement TitleInput => driver.FindElement(By.Id("form2Example17"));
 		public IWebElement DescInput => driver.FindElement(By.XPath("//textarea[@name='Description']"));
@@ -28,12 +29,13 @@ namespace MovieCatalogTests.Pages
 
 
 
-		public void AssertEmptyTitleError() 
+		public void AssertEmptyTitleError()
 		{
 			Assert.That(ToastMessage.Text.Trim(), Is.EqualTo("The Title field is required."), "Message did not appear");
-		}public void AssertEmptyDescriptionError()
+		}
+		public void AssertEmptyDescriptionError()
 		{
-			
+
 			Assert.That(ToastMessage.Text.Trim(), Is.EqualTo("The Description field is required."), "Message did not appear");
 		}
 
@@ -41,14 +43,13 @@ namespace MovieCatalogTests.Pages
 		{
 			TitleInput.SendKeys(name);
 			DescInput.SendKeys(description);
-		
-			
-			
+
 			AddButton.Click();
 		}
-		public void OpenPage() { 
-		driver.Navigate().GoToUrl(Url);
-			
-				}
+		public void OpenPage()
+		{
+			driver.Navigate().GoToUrl(Url);
+
+		}
 	}
 }

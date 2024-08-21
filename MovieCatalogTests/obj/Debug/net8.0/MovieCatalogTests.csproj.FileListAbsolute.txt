@@ -102,3 +102,5 @@ C:\Users\Gamer\Visual Studio Projects\ExamPrepSelenium\MovieCatalogTests\MovieCa
 C:\Users\Gamer\Visual Studio Projects\ExamPrepSelenium\MovieCatalogTests\MovieCatalogTests\obj\Debug\net8.0\MovieCatalogTests.pdb
 C:\Users\Gamer\Visual Studio Projects\ExamPrepSelenium\MovieCatalogTests\MovieCatalogTests\obj\Debug\net8.0\MovieCatalogTests.genruntimeconfig.cache
 C:\Users\Gamer\Visual Studio Projects\ExamPrepSelenium\MovieCatalogTests\MovieCatalogTests\obj\Debug\net8.0\ref\MovieCatalogTests.dll
+C:\Users\Gamer\Visual Studio Projects\ExamPrepSelenium\MovieCatalogTests\MovieCatalogTests\bin\Debug\net8.0\SeleniumExtras.WaitHelpers.dll
+C:\Users\Gamer\Visual Studio Projects\ExamPrepSelenium\MovieCatalogTests\MovieCatalogTests\obj\Debug\net8.0\MovieCatalogTests.sourcelink.json

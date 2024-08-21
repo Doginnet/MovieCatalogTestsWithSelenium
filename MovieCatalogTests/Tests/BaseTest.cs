@@ -15,6 +15,10 @@ namespace MovieCatalogTests.Tests.Test
 		public LoginPage loginPage; //Here all the pages are declared, and then invoked lower down
 		public AddMoviePage addMoviePage;
 		public AllMoviesPage allMoviesPage;
+		public BasePage basePage;
+		public WatchedMoviesPage watchedMoviesPage;
+		public EditMoviePage editMoviePage;
+
 		[OneTimeSetUp]
 		public void Setup()
 		{
@@ -29,6 +33,9 @@ namespace MovieCatalogTests.Tests.Test
 			loginPage = new LoginPage(driver);
 			addMoviePage = new AddMoviePage(driver);
 			allMoviesPage = new AllMoviesPage(driver);
+			basePage = new BasePage(driver);
+			editMoviePage = new EditMoviePage(driver);
+			watchedMoviesPage = new WatchedMoviesPage(driver);
 
 			loginPage.OpenPage(); //Login is made in the one time setup, since all tests are for logged users
 			loginPage.PerformLogin("test@abv.com", "123456");
@@ -43,13 +50,13 @@ namespace MovieCatalogTests.Tests.Test
 			driver.Dispose();
 		}
 
-		public string GenerateRandomName()
+		protected string GenerateRandomName()
 		{
 			var random = new Random();
-			return "Title" + random.Next(1000, 1000);
+			return "Title_" + random.Next(100, 1000);
 
 		}
-		public void PauseAndScroll() //this method needs to be used when elements are out of bounds
+		protected void PauseAndScroll() //this method needs to be used when elements are out of bounds
 		{
 			IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
 			js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
